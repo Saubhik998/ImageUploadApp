@@ -96,8 +96,6 @@ ImageUploadApp/
 
 ```
 
----
-
 ## **API Endpoints**  
 
 | **Endpoint**            | **Method** | **Description**                                  
@@ -109,6 +107,13 @@ ImageUploadApp/
 | `/Home/Edit/{id}`       | GET        | Opens the edit page for a specific upload      
 | `/Home/Edit`            | POST       | Updates an existing upload                     
 | `/Home/GetImage/{id}`   | GET        | Retrieves an image by ID from GridFS           
+
+---
+
+## **References**
+- ASP.NET Core MVC Documentation
+- MongoDB GridFS Documentation
+
 
 
 
