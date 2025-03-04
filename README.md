@@ -1,8 +1,4 @@
-Here's a **detailed `README.md`** file for your project with **clear explanations**, **setup instructions**, **features**, **usage guide**, and **future enhancements**.  
-
----
-
-# **Image Upload & Text Manager**  
+# **Image Upload & Text**  
 
 A **.NET Core MVC** application that allows users to upload images with text descriptions, view uploaded entries, and edit them. **MongoDB with GridFS** is used for efficient image storage and retrieval.
 
