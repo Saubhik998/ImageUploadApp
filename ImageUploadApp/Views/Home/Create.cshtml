@@ -1,0 +1,21 @@
+﻿@model ImageUploadApp.Models.ImageTextModel
+
+<h2>Upload New Image</h2>
+
+<!--creating form for uploading a new image with text-->
+<form asp-controller="Home" asp-action="Create" method="post" enctype="multipart/form-data">
+
+    <div class="form-group">
+        <!--field for entering text associated with the image -->
+        <label>Text</label>
+        <input asp-for="Text" class="form-control" required />
+    </div>
+
+    <div class="form-group">
+        <!--input to select an image for upload -->
+        <label>Upload Image</label>
+        <input type="file" asp-for="ImageFile" class="form-control" accept="image/*" required />
+    </div>
+
+    <button type="submit" class="btn btn-success">Submit</button> 
+</form>

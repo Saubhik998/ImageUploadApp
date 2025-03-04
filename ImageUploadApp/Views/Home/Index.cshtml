@@ -1,0 +1,23 @@
+﻿@{
+    ViewData["Title"] = "Home";
+}
+
+<div class="container mt-4">
+    <div class="text-center">
+        <h2 class="mb-4">Upload Image and Text</h2>
+    </div>
+
+    <div class="row justify-content-center">
+        <div class="col-md-6 text-center">
+            <a href="@Url.Action("Upload", "Home")" class="btn btn-primary btn-lg m-2">
+                <i class="fas fa-upload"></i> Upload
+            </a>
+            <a href="@Url.Action("ViewUploads", "Home")" class="btn btn-secondary btn-lg m-2">
+                <i class="fas fa-images"></i> View Uploads
+            </a>
+        </div>
+    </div>
+</div>
+
+
+<link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.0.0/css/all.min.css">

@@ -1,0 +1,55 @@
+﻿@model List<ImageUploadApp.Models.ImageTextModel>
+
+@{
+    ViewData["Title"] = "View Uploads";
+}
+
+<!-- page title -->
+<h2 class="mb-3">Uploaded Images & Text</h2>
+
+@if (Model != null && Model.Any()) // check if the model contains any uploaded records
+{
+    <table class="table table-bordered table-striped">
+        <thead class="thead-dark">
+            <tr>
+                <th>Text</th> <!-- column for the uploaded text -->
+                <th>Image</th> <!-- column for the uploaded image preview -->
+                <th>Actions</th> <!-- column for editing the entry -->
+            </tr>
+        </thead>
+        <tbody>
+            @foreach (var item in Model) // loop through all uploaded records
+            {
+                <tr>
+                    <td>@item.Text</td> <!-- display the uploaded text -->
+                    <td>
+                        @if (!string.IsNullOrEmpty(item.ImageId)) // check if an image exists
+                        {
+                            <!--display the uploaded image with a fixed size -->
+                            <img src="@Url.Action("GetImage", "Home", new { id = item.ImageId })"
+                                 width="100" height="100" style="object-fit: cover;" />
+                        }
+                        else
+                        {
+                            <span>No Image</span> <!-- display message if no image exists -->
+                        }
+                    </td>
+                    <td>
+                        <!-- edit button to modify the text or replace the image -->
+                        <a href="@Url.Action("Edit", "Home", new { id = item.Id })" class="btn btn-warning btn-sm">
+                            Edit
+                        </a>
+                    </td>
+                </tr>
+            }
+        </tbody>
+    </table>
+}
+else
+{
+    
+    <p>No uploads available.</p>
+}
+
+
+<a href="@Url.Action("Index", "Home")" class="btn btn-secondary mt-3">Back to Home</a>
