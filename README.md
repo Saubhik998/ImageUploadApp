@@ -1,4 +1,4 @@
-# **Image Upload & Text**  
+# **ImageUploadApp**  
 
 A **.NET Core MVC** application that allows users to upload images with text descriptions, view uploaded entries, and edit them. **MongoDB with GridFS** is used for efficient image storage and retrieval.
 
